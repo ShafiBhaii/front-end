@@ -22,7 +22,7 @@ pipeline {
         stage('Package') {
             steps {
                 echo 'Packaging....'
-		sh ;npm install'
+		sh 'npm install'
 		sh 'npm package'
 		archiveArtifacts artifacts: '**/distribution/*.zip', fingerprint: true 
             }
